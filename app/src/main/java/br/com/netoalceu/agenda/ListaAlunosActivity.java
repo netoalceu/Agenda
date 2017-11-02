@@ -26,7 +26,7 @@ public class ListaAlunosActivity extends AppCompatActivity {
          * ArrayAdapter - Converte uma lista de String em uma view
          * this é o context - serve p dizer qual activity se trada a view
          * simple_list_item - é o layout da View que vamos usar
-         *
+         *So falta testar o merge do github????
          */
 
         listaAlunos.setAdapter(adapter);
