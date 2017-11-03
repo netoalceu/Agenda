@@ -20,7 +20,7 @@ public class ListaAlunosActivity extends AppCompatActivity {
                 "Daniel", "Ronaldo", "Jeferson", "Felipe",
                 "Daniel", "Ronaldo", "Jeferson", "Felipe",
                 "Daniel", "Ronaldo", "Jeferson", "Felipe"};
-        ListView listaAlunos = (ListView) findViewById(R.id.ListaAlunos);
+        ListView listaAlunos = (ListView) findViewById(R.id.ListaAlunosList);
         /**
          * Views - Todos os objetos da tela (Activity)
          * findViewById(R.id.lista_alunos) - Pego a View apontada pelo ID
@@ -36,7 +36,7 @@ public class ListaAlunosActivity extends AppCompatActivity {
          *So falta testar o merge do github????
          */
         listaAlunos.setAdapter(adapter);
-        Button novoAluno = (Button) findViewById(R.id.ListaAlunosBtnNovoAluno);
+        Button novoAluno = (Button) findViewById(R.id.ListaAlunosBtnNovo);
         novoAluno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
