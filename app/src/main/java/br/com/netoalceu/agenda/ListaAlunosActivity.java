@@ -1,8 +1,11 @@
 package br.com.netoalceu.agenda;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 public class ListaAlunosActivity extends AppCompatActivity {
@@ -12,8 +15,12 @@ public class ListaAlunosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_alunos);
 
-        String [] alunos = {"Daniel", "Ronaldo", "Jeferson", "Felipe"};
-        ListView listaAlunos = (ListView) findViewById(R.id.LISTA_ALUNOS);
+        String [] alunos = {"Daniel", "Ronaldo", "Jeferson", "Felipe",
+                "Daniel", "Ronaldo", "Jeferson", "Felipe",
+                "Daniel", "Ronaldo", "Jeferson", "Felipe",
+                "Daniel", "Ronaldo", "Jeferson", "Felipe",
+                "Daniel", "Ronaldo", "Jeferson", "Felipe"};
+        ListView listaAlunos = (ListView) findViewById(R.id.ListaAlunos);
         /**
          * Views - Todos os objetos da tela (Activity)
          * findViewById(R.id.lista_alunos) - Pego a View apontada pelo ID
@@ -28,7 +35,14 @@ public class ListaAlunosActivity extends AppCompatActivity {
          * simple_list_item - é o layout da View que vamos usar
          *So falta testar o merge do github????
          */
-
         listaAlunos.setAdapter(adapter);
+        Button novoAluno = (Button) findViewById(R.id.ListaAlunosBtnNovoAluno);
+        novoAluno.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentVaiParaForrmulario = new Intent(ListaAlunosActivity.this,FormAlunoActivity.class);
+                startActivity(intentVaiParaForrmulario);
+            }
+        });
     }
 }
